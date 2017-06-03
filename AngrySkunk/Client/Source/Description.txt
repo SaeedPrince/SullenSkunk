@@ -1,0 +1,39 @@
+Generate a level containing all data required for the game
+{
+	Set the stage to play
+	Set a background image from set of images provided	
+	floor segment
+	launcher location
+	launcher orientation
+	object editor
+	{
+		Shape – box, rectangle, circle, ellipse;
+		Mass;
+		Texture/image from a library;
+		Other physics properties, bounciness?
+	}
+	target bird editor
+	{
+		Shape;
+		Mass;
+		Texture/image from library
+		Floating “fly away” properties
+	}
+	Allow gameplay objects to be placed and oriented in the world
+	Allow target “birds” spawn points and parameters to be placed on the stage
+
+}
+
+Save level
+{
+	with a name to specific xml file
+	Allow a user to reload levels and edit them
+	Allow the user to copy entire levels to enable easier creation of new levels
+}
+
+
+Bonus
+{
+	Allow the user to attach audio trigger regions
+	Allow the user to create generic trigger regions (triggering other actions)
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+body
+{
+    background-image:url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 13pt;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #110f17;
+}
+
+.top, .bottom, .left, .right
+{
+    background: #a5ebff;
+    position: fixed;
+}
+.left, .right
+{
+    top: 0; bottom: 0;
+    width: 5px;
+}
+.top, .bottom
+{
+    height: 5px;
+}
+
+#Area0.left, #Area0.top, #Area0.bottom { left: 0; }
+#Area0.right, #Area1.left, #Area1.top, #Area1.bottom { left: 4%; }
+#Area1.right, #Area2.left, #Area3.left, #Area4.left ,#Area2.top, #Area2.bottom, #Area3.top, #Area3.bottom, #Area4.top, #Area4.bottom { left: 20%; }
+#Area2.right, #Area3.right, #Area4.right, #Area2.top, #Area2.bottom, #Area3.top, #Area3.bottom, #Area4.top, #Area4.bottom { right: 0; }
+#Area1.top, #Area1.bottom { right: 80%; }
+#Area0.top, #Area0.bottom {right: 96%; }
+#Area0.top, #Area1.top, #Area2.top { top: 0; }
+#Area2.bottom, #Area3.top { top: 20%; }
+#Area0.bottom, #Area1.bottom, #Area4.top { bottom: 0; }
+#Area3.bottom, #Area4.bottom { bottom: 5%; }

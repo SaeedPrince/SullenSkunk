@@ -1,0 +1,161 @@
+@charset "utf-8";
+body
+{ 
+background-image:url(background.png);
+background-repeat: no-repeat;
+background-size: cover;
+font-size: 13pt;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+color: #110f17;
+}
+
+#battleship_picture
+{
+  width: 100%;
+  height: 130%;
+}
+
+.HomeImage 
+{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 384px;
+    height: 307px;
+}
+
+h1, h2 
+{
+    color:  #603;
+    text-align: center;
+
+}
+
+.battleship_menu ul 
+{
+    padding: 25px 0px 0px 0px;
+    list-style:none;
+}
+
+.battleship_menu ul li {float:left;}
+
+.battleship_menu ul li a
+{
+  font: bold 18px sans-serif;
+  padding: 15px 0px;
+  background: #B2B2CC;
+  width: 170px;
+  
+  margin: 3px  5px  0px 5px;
+  border:#39392C solid 1px;
+  text-align:center;
+  border-radius: 0% 0% 50% 50% ;
+  color:#474724;
+  cursor:pointer;
+  background: radial-gradient(ellipse, #FFFFFF, #B2B2CC);
+  display: inline-block;
+  
+}
+
+.battleship_menu ul li a:hover 
+{
+  background: #8DAAC6;
+  color: #CCFFFF;
+
+}
+
+.battleship_menu ul li a:link, a:visited, a:hover,a:active 
+{
+    text-decoration: none;
+}
+
+img.left 
+{
+	float: left; 
+	margin-right: 20px;
+}
+
+img.right 
+{
+	float: right; 
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.put_in_center
+{	
+	text-align: center;
+	
+}
+
+.put_in_right 
+{
+	text-align: right;
+	padding: 10px;
+}
+
+.put_in_left
+{	
+	text-align: left;
+	padding: 10px;
+}
+
+.small
+{  
+	margin-top:10px;
+	display:inline-block;
+	border: 3px  #8A8A5C ;
+	border-style:dashed; 
+}
+
+#description
+{
+	text-align:justify; 
+	margin:20px 10% 0px;
+}
+
+#displayimg
+{
+	border:#8A8A5C double 16px;
+}
+
+.footer 
+{
+	text-align:center;
+	border-top:solid 2px; 
+}
+
+/* Tooltip container obtained from w3school.org */
+.tooltip 
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext 
+{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext 
+{
+    visibility: visible;
+}
+
+.Button:hover 
+{
+  filter: invert(100%);
+}
