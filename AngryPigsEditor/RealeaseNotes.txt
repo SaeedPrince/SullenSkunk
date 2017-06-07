@@ -1,0 +1,48 @@
+# *** PG<10> T<2> Web apps 2  - AngryPigsLevelEditor ***
+---------------------------------------
+<Dean Huisman>
+<June 1 2017>
+
+<Description of what my project does - edit and replace this line>
+
+[demo] https://pgwm.vfs.local.dev/~pg10Dean/AngryPigsEditor/
+
+
+## Synopsis
+---------------
+(A game level editor that the user can create a level and fill thie objects.
+Save this level and upload to the server that can be accessed later.) 
+
+
+## Motivation (optional)
+---------------
+(this project exists because is was an assignment to learn PHP and server/client comunication.)
+
+
+# Download/Install
+---------------------------------------
+(Provide code examples and explanations of how to get the project.)
+
+https://pgwm.vfs.local.dev/~pg10Dean/AngryPigsEditor/
+
+
+
+# *** How to use ***
+---------------------------------------
+<Instructions on how to use the app - edit and replace this line>
+
+select items and place in the play window to create a level
+save level will then save the information in the play window
+load will open previously created levels
+play will select the current level and run the game	
+
+
+# *** Caveats *** (optional)
+---------------------------------------
+
+(Describe what doesn't work, what's missing and what if anything users need to
+do to make it work for them. )
+
+(Cant save objects from level 
+load levels does nothing
+issues with JSON)

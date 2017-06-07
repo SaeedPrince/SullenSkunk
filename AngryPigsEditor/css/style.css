@@ -1,0 +1,162 @@
+@font-face{
+   font-family:'Viga';
+   src:url('../fonts/Viga-Regular.otf');
+}
+.namespace{
+  font-family: 'Viga';
+}
+
+body{
+  margin: auto;
+  background-image:url("../images/BG.jpg");
+  background-size: 100% 100%;
+}
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  margin: 10px auto 10px auto;
+  background-color: red;
+
+}
+
+.droppable {
+  width:inherit;
+  height:inherit;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+ }
+
+.topbar{
+  display: inline-flex;
+  height: 80px;
+  width: 100%;
+  border: 1px solid black;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #29487d;
+}
+.button{
+
+  background-color: rgba(150, 150, 150, .8);
+  height: 50px;
+  width: 130px;
+  border-radius:10px;
+  margin: 15px 5px 0px 5px;
+  font-size: 22px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#saveWindow{
+  border: 3px solid black;
+  margin: 60px auto 0px auto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.saveWindow{
+  border: 3px solid black;
+  margin: 60px auto 0px auto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.container{
+   background-image:url("../images/BG.jpg");
+   background-size: 100% 100%;
+   display:inline-flex;
+   height: 900px;
+   width: 1500px;
+   margin: 90px auto 5px auto;
+   position:absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   border-radius: 20px;
+ }
+ .objects{
+   height: 800px;
+   width: 200px;
+   border: 3px solid black;
+   margin: 60px auto 0px auto;
+   border-radius: 20px;
+   background-color: rgba(255, 255, 255, 0.5);
+ }
+ #objects{
+
+   font-size: 22px;
+   width: 80px;
+   text-align: center;
+   margin: 15px auto 15px auto ;
+   background-color: rgba(255, 255, 255, 1);
+   border: 3px solid black;
+   border-radius: 5px;
+ }
+ #block1{
+   background-color: rgba(0, 0, 0, 0);
+   background-image: url('../images/hayBale.png');
+   background-size: 100% 100%;
+ }
+ #block2{
+   background-color: rgba(0, 0, 0, 0);
+   background-image: url('../images/crate7.png');
+   background-size: 100% 100%;
+ }
+ #block3{
+   background-color: rgba(0, 0, 0, 0);
+   background-image: url('../images/fence.png');
+   background-size: 100% 100%;
+ }
+ #block4{
+   background-color: rgba(0, 0, 0, 0);
+   background-image: url('../images/cannon.png');
+   background-size: 100% 100%;
+ }
+ #block5{
+   background-color: rgba(0, 0, 0, 0);
+   background-image: url('../images/bird.png');
+   background-size: 100% 100%;
+ }
+.scene{
+  height: 850px;
+  width: 800px;
+  border: 3px solid black;
+  margin: 20px auto 0px auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.properties{
+ height: 800px;
+ width: 300px;
+ border: 3px solid black;
+ margin: 60px auto 0px auto;
+ border-radius: 20px;
+ background-color: rgba(255, 255, 255, 0.5);
+}
+ #properties{
+   font-size: 22px;
+   width: 80px;
+   text-align: center;
+   margin: 10px auto 0px auto ;
+   background-color: rgba(255, 255, 255, 1);
+   border: 3px solid black;
+   border-radius: 5px;
+ }
+ .ui-dialog{
+   border: 3px solid black;
+   margin: 60px auto 0px auto;
+   border-radius: 5px;
+   background-color: rgba(50, 50, 50, 0.8);
+   font-family: 'Viga';
+ }

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+  <script type="text/javascript" src="js/buzz.js"></script>
+
+
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+
+</head>
+<body>
+
+  <!-- nav bar -->
+<div class="topbar">
+
+    <!-- popup save window -->
+  <div class="namespace" id="saveWindow">
+    Name your Level
+    <input class="namespace" type="text" id="gameSaveTittle" name="Name" />
+  </div>
+  <!-- buttons of options -->
+  <button type="button" name="save" class="button namespace" id="save"> save </button>
+  <input type="reset" name="reset" value="Reset" class="button namespace" id="reset">
+  <button type="button" name="save" class="button namespace" id="load"> load </button>
+  <button type="button" name="save" class="button namespace" id="play"> play </button>
+</div>
+
+  <!-- a division of object windows, gameplay window and information window -->
+<div class="container">
+
+  <div class="objects">
+
+    <div class="namespace" id="objects"> Items </div>
+
+
+    <section class="draggables" id="obs">
+
+      <div class="draggable" class="ui-widget-content" id="block1">
+        <!--  <p>Drag me to my target</p> -->
+      </div>
+
+      <div class="draggable" class="ui-widget-content" id="block2">
+        <!--<p>Drag me to my target</p>-->
+      </div>
+
+      <div class="draggable" class="ui-widget-content" id="block3">
+        <!--<p>Drag me to my target</p>-->
+      </div>
+
+      <div class="draggable" class="ui-widget-content" id="block4">
+        <!--<p>Drag me to my target</p>-->
+      </div>
+
+      <div class="draggable" class="ui-widget-content" id="block5">
+        <!--<p>Drag me to my target</p>-->
+      </div>
+
+  </section>
+
+  </div>
+
+  <!-- main gameplay window -->
+  <div class="scene droppable">
+  </div>
+
+  <!--  information about objects -->
+  <div class="properties">
+    <div class="namespace" id="properties"> Info </div>
+  </div>
+
+</div>
+
+
+
+</body>
+
+<script src="js/objects.js" charset="utf-8"></script>
+<script src="js/editor.js" charset="utf-8"></script>
+
+</html>
