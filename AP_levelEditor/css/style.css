@@ -1,0 +1,202 @@
+/* Google font Barrio for logo */
+@import url('https://fonts.googleapis.com/css?family=Barrio');
+/* class card layout for all elements [nav] */
+.card {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+}
+
+body {
+  background-color: #EBE8E4;
+  color: #222;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* Nav elements */
+nav {
+  min-width: 1024px;
+  display: block;
+  margin-left: 4px;
+  overflow: hidden;
+  width: 99,5%;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+nav > ul > li > a {
+  color: #aaa;
+  display: block;
+  line-height: 56px;
+  padding: 0 24px;
+  text-decoration: none;
+}
+nav > ul > li:hover {
+  background-color: rgb( 40, 44, 47 );
+}
+nav > ul > li:hover > a {
+  color: rgb( 255, 255, 255 );
+}
+.logo {
+  font-family: 'Barrio', cursive;
+  font-size: 30px;
+  background-color: #000;
+  float: right;
+  pointer-events: none;
+  cursor: default;
+}
+.logo img {
+  position: absolute;
+  top: 38px;
+}
+nav ul li.logo a{
+  color: #fff;
+}
+/* End  Nav*/
+
+.container {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Editor Components DIV */
+.components {
+  margin: 10px 0 0 4px;
+  width: 200px;
+  height: 700px;
+  flex-grow: 1;
+}
+.components p {
+  font-family: 'Barrio', cursive;
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+  background-color: #fff;
+  margin: 5px 0;
+}
+.components ul {
+  padding: 0;
+}
+.objects {
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+  list-style: none;
+  margin: 20px auto 20px auto;
+}
+.obj-box {
+  background-image: url("../img/box.png");
+}
+.obj-canon {
+  background-image: url("../img/canon.png");
+}
+#canon-update{
+  width: 200px;
+	height: 200px;
+  margin: 0;
+}
+.obj-bee {
+  background-image: url("../img/bee.png");
+  animation: bee-fly 0.4s infinite;
+}
+#bee-update {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  z-index: 2;
+}
+@keyframes bee-fly {
+  0%  {background-image:  url("../img/bee.png");}
+  25% {background-image:  url("../img/bee01.png");}
+  50% {background-image:  url("../img/bee02.png");}
+  75% {background-image:  url("../img/bee03.png");}
+}
+/* End components */
+
+/* Editor Scene DIV */
+.scene {
+  margin: 10px 0 0 10px;
+  width: 650px;
+  height: 700px;
+  flex-grow: 2;
+}
+.sceneBG{
+	background-image:url('');
+	background-size:cover;
+	background-position: center;
+	height: 656px;
+  width: auto;
+  z-index: -1;
+  border: 1px solid white;
+}
+/* End Scene */
+
+/* Editor Inspector DIV */
+.inspector {
+  margin: 10px 0 0 10px;
+  width: 200px;
+  height: 700px;
+  flex-grow: 1;
+}
+.inspector p {
+  font-family: 'Barrio', cursive;
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+  background-color: #fff;
+  margin: 5px 0;
+}
+.inspector form {
+  margin-top: 10px;
+  text-align: center;
+}
+.inspector form input {
+  width: 50%;
+	margin: 2.5%;
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid #dedede;
+	transition: 0.5s;
+}
+.inspector form input:focus {
+  outline: none !important;
+  border:1px solid black;
+  box-shadow: 0 0 10px #dedede;
+}
+/* End Inspector */
+
+.draggable {
+  width: 120px;
+  height: 120px;
+  padding: 0.5em;
+  position: absolute;
+  margin: 0;
+}
+
+.droppable {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+  background-color: yellow;
+}

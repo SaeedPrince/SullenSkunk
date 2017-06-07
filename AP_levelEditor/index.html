@@ -1,0 +1,57 @@
+<!-- Class: PG10 -->
+<!-- author: Richard Scott de A. Zampieri -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angry Pigs - Level Editor</title>
+  <!--Page layout style sheet-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--Jquery CDN-->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <!-- Level Editor Navigation bar -->
+  <nav class="card">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="levels.html">Load Levels</a></li>
+          <li><a href="#" class="save-data">Save</a></li>
+          <li><a href="#">New</a></li>
+          <li class="logo"><a href="#">Angry Pigs Level Editor<img src="img/logo.png" alt="Angry Pigs Editor"></a></li>
+      </ul>
+  </nav>
+  <!-- Level Editor panels -->
+  <div class="container">
+    <!-- Left Panel - Components -->
+    <div class="components card">
+      <p>Components</p>
+        <div class="objects obj-box"></div>
+        <div class="objects obj-canon"></div>
+        <div class="objects obj-bee"></div>
+    </div>
+    <!-- Main Panel - Scene -->
+    <div class="scene card">
+      <input type="file" id="getval" name="background-image" onchange="appEditor.readURL(event)" /><br/><br/>
+      <div class="sceneBG"></div>
+    </div>
+    <!-- Right Panel - Inspector -->
+    <div class="inspector card">
+      <p>Inspector</p>
+      <form>
+        Height: <br>
+        <input type="text" name="Height" value=""><br>
+        Width: <br>
+        <input type="text" name="Width" value=""><br>
+        Position.X: <br>
+        <input type="text" name="xPos" value=""><br>
+        Position.Y: <br>
+        <input type="text" name="yPos" value="">
+      </form>
+    </div>
+  </div>
+</body>
+<script src="js/editor.js" charset="utf-8"></script>
+<script src="js/app.js" charset="utf-8"></script>
+</html>
