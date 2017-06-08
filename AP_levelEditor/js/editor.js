@@ -23,23 +23,27 @@ class Editor {
 
   /* Event handler to create objetcs for the scene on click event */
   createObj(event){
-
+    let boxCount = 1;
     /* Box */
     this.box.click(() => {
       var currentBox = this.box.clone().appendTo($('.sceneBG'));
       currentBox.addClass("draggable").draggable({
         containment: ".sceneBG"
       });
-      /* get current object data */
-      this.obj.type = "canon";
-      this.obj.width  = $(currentBox).width();
-      $('input[name="Width"]').val(this.obj.width);
-      this.obj.height = $(currentBox).height();
-      $('input[name="Height"]').val(this.obj.height);
-      this.obj.left   = $(currentBox).position().left;
-      $('input[name="xPos"]').val(this.obj.left);
-      this.obj.top    = $(currentBox).position().top;
-      $('input[name="yPos"]').val(this.obj.top);
+      currentBox.attr("id", "box-" +boxCount);
+      boxCount++;
+        /* get current object data and show on fields */
+      $(currentBox).mousedown(() => {
+        this.obj.type = "box";
+        this.obj.width  = $(currentBox).width();
+        $('input[name="Width"]').val(this.obj.width);
+        this.obj.height = $(currentBox).height();
+        $('input[name="Height"]').val(this.obj.height);
+        this.obj.left   = $(currentBox).position().left;
+        $('input[name="xPos"]').val(this.obj.left);
+        this.obj.top    = $(currentBox).position().top;
+        $('input[name="yPos"]').val(this.obj.top);
+      });
     });
 
     /* Canon */
@@ -70,16 +74,24 @@ class Editor {
         containment: ".sceneBG"
       });
       /* get current object data */
-      this.obj.type = "bee";
-      this.obj.width  = $(currentBee).width();
-      $('input[name="Width"]').val(this.obj.width);
-      this.obj.height = $(currentBee).height();
-      $('input[name="Height"]').val(this.obj.height);
-      this.obj.left   = $(currentBee).position().left;
-      $('input[name="xPos"]').val(this.obj.left);
-      this.obj.top    = $(currentBee).position().top;
-      $('input[name="yPos"]').val(this.obj.top);
+      $(currentBee).mousedown(() => {
+        this.obj.type = "bee";
+        this.obj.width  = $(currentBee).width();
+        $('input[name="Width"]').val(this.obj.width);
+        this.obj.height = $(currentBee).height();
+        $('input[name="Height"]').val(this.obj.height);
+        this.obj.left   = $(currentBee).position().left;
+        $('input[name="xPos"]').val(this.obj.left);
+        this.obj.top    = $(currentBee).position().top;
+        $('input[name="yPos"]').val(this.obj.top);
+      });
     });
+  }
+
+  /* Event handler to save object data in the screen */
+  SaveObjtData(event) {
+
+
   }
 
   /* Event handler to get information about all objects in the scene */
