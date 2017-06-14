@@ -38,8 +38,8 @@
       <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="levels.html" data-toggle="modal" data-target="#layerForm">Load Levels</a></li>
-          <li><a href="#" class="save-data demo-2 btn btn-primary"  data-toggle="modal" data-target="#modalForm">Save</a></li>
-          <li><a href="#">New</a></li>
+          <li><a href="#" class="save-data" data-toggle="modal" data-target="#modalForm">Save</a></li>
+          <li><a href="#">Play</a></li>
           <li class="logo"><a href="#">Angry Pigs Level Editor<img src="img/logo.png" alt="Angry Pigs Editor"></a></li>
       </ul>
   </nav>
