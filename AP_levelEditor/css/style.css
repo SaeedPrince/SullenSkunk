@@ -200,3 +200,59 @@ nav ul li.logo a{
   margin: 10px;
   background-color: yellow;
 }
+
+/* css for popup */
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modalForm {
+  display: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-group input{
+	color: #888;
+  width: 70%;
+  padding: 0px 0px 0px 5px;
+  border: 1px solid #C5E2FF;
+  background: #FBFBFB;
+  outline: 0;
+  -webkit-box-shadow: inset 0px 1px 6px #ECF3F5;
+  box-shadow: inset 0px 1px 6px #ECF3F5;
+  font: 200 12px/25px Arial, Helvetica, sans-serif;
+  height: 30px;
+  line-height: 15px;
+  margin: 2px 6px 16px 0px;
+}

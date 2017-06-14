@@ -10,14 +10,52 @@
   <!--Jquery CDN-->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--Enable and Disable Popup for Saving-->
+	<script>
+	function displayPopup(){
+		$('.modal').show();
+	}
+	function closePopup(){
+		$('.modal').hide();
+	}
+	$(document).ready(function(){
+		$( ".draggable" ).draggable();
+     });
+  </script>
 </head>
 <body>
-  <!-- Level Editor Navigation bar -->
+	<!-- Popup Content for Save Json file -->
+		<div class="modal" id="modalForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 id="myModalLabel">Save Level</h4>
+					</div>
+					<!-- Modal Body -->
+					<div class="modal-body">
+						<p class="statusMsg"></p>
+						<form role="form">
+							<div class="form-group">
+								<label for="inputName">Name</label>
+								<input type="text" class="form-control" id="inputName" placeholder="Enter level name"/>
+							</div>
+						</form>
+					</div>
+					<!-- Modal Footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" onclick='closePopup()'>Close</button>
+						<button type="button" class="btn btn-primary submitBtn" onclick='closePopup()'>Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Level Editor Navigation bar -->
   <nav class="card">
       <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="levels.html">Load Levels</a></li>
-          <li><a href="#" class="save-data">Save</a></li>
+          <li><a href="levels.php">Load Levels</a></li>
+          <li><a href="#" onclick='displayPopup()'>Save</a></li>
           <li><a href="#">New</a></li>
           <li class="logo"><a href="#">Angry Pigs Level Editor<img src="img/logo.png" alt="Angry Pigs Editor"></a></li>
       </ul>
@@ -33,8 +71,14 @@
     </div>
     <!-- Main Panel - Scene -->
     <div class="scene card">
+	<!-- here required form for save background image -->
+	<form id="uploadimage" action="savebg.php" method="post" enctype="multipart/form-data">
       <input type="file" id="getval" name="background-image" onchange="appEditor.readURL(event)" /><br/><br/>
-      <div class="sceneBG"></div>
+	</form>
+	  <!-- layer data -->
+	  <div id='layerData'>
+		<div class="sceneBG"></div>
+	  </div>
     </div>
     <!-- Right Panel - Inspector -->
     <div class="inspector card">

@@ -5,6 +5,7 @@ class Editor {
     this.box   = $('.obj-box');
     this.canon = $('.obj-canon');
     this.bee   = $('.obj-bee');
+    this.save  = $('.submitBtn');
     this.obj = {
         type: "",
         x: 0,
@@ -12,13 +13,6 @@ class Editor {
         width:  0,
         height: 0,
     };
-    this.saveData = $('.save-data');
-    this.level = {
-      lvlname: "",
-      objBee: [],
-      objBox: [],
-      lvlBackground: ""
-    }
   }
 
   /* Event handler to create objetcs for the scene on click event */
@@ -89,22 +83,37 @@ class Editor {
   }
 
   /* Event handler to save object data in the screen */
-  SaveObjtData(event) {
+  saveObjtData(event) {
+    this.save.click(() => {
+  		var name = $('#inputName').val();
+  		var values= $('#layerData').html();
+  		var file_data = $('#getval').prop('files')[0];
+  		var form_data = new FormData();
+  		form_data.append('file', file_data);
 
-
+  		if(name.trim() == '' ){
+  			alert('Please enter level name.');
+  			$('#inputName').focus();
+  			return false;
+  		}else{
+  			$.ajax({
+  				type:'POST',
+  				url:'server/savejson.php',
+  				data:'saveLevel=1&name='+name+'&data='+escape(values)+'&form_data='+form_data,
+  				beforeSend: function () {
+  					$('.submitBtn').attr("disabled","disabled");
+  				},
+  				success:function(msg){
+  				}
+  			});
+  		}
+    });
   }
 
   /* Event handler to get information about all objects in the scene */
-  InfoObj(event) {
+  loadLevelData(event) {
     this.saveData.click(() => {
-      /*
-      add this.level.lvlname
-      add canon position x and y
-       add for loop for objBee and objBox
-       obj must contain id, width, heigh, x, y
-       objBee[i] = beeObj create inside to store many cloned itens
 
-      */
     });
   }
 
@@ -114,6 +123,20 @@ class Editor {
   readURL(event){
   	var getImagePath = URL.createObjectURL(event.target.files[0]);
   	$('.sceneBG').css('background-image', 'url(' + getImagePath + ')');
+		var myFormData = new FormData();
+		myFormData.append('background-image', $('#getval').prop('files')[0]);
+
+		$.ajax({
+		  url: 'server/savebg.php',
+		  type: 'POST',
+		  processData: false, // important
+		  contentType: false, // important
+		  dataType : 'text',
+		  data: myFormData,
+		  success: function(response){
+				$('.sceneBG').css('background-image', 'url(' + response + ')');
+			}
+		});
   }
 }
 

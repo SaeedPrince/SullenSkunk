@@ -13,10 +13,13 @@ class App {
     __private__.set( this, local );
 
     /* My Editor functions */
-    appEditor.createObj();
-    appEditor.InfoObj();
 
-    /* need load level, save level, server implementation */
+    //create objects to the scene and turn them draggable
+    appEditor.createObj();
+    //save objects to a json file
+    appEditor.saveObjtData();
+    //load scene objects
+
   }
 }
 /* Main app instance */
