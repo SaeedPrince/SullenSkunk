@@ -6,6 +6,7 @@ class Editor {
     this.canon = $('.obj-canon');
     this.bee   = $('.obj-bee');
     this.save  = $('.submitBtn');
+    this.load  = $('.loadInfo');
     this.obj = {
         type: "",
         x: 0,
@@ -112,9 +113,7 @@ class Editor {
 
   /* Event handler to get information about all objects in the scene */
   loadLevelData(event) {
-    this.saveData.click(() => {
 
-    });
   }
 
 

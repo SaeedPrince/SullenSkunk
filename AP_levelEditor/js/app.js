@@ -19,6 +19,7 @@ class App {
     //save objects to a json file
     appEditor.saveObjtData();
     //load scene objects
+    appEditor.loadLevelData();
 
   }
 }

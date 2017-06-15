@@ -51,19 +51,18 @@
        <?php
 	    // Display all levels from folder where we saved all json files
 	    $dir    = 'server/json';
-		$files = array_diff(scandir($dir), array('.', '..'));
-		foreach($files as $k=>$va)
-		{
+		  $files = array_diff(scandir($dir), array('.', '..'));
+		  foreach($files as $k=>$va) {
 			if (!is_dir("server/json/$va")){
 					$name= "'".$va."'";
-					echo '<a href="javascript:;" onclick="loadLevelData('.$name.')">';
+					echo '<a class="loadInfo" href="javascript:;" onclick="loadLevelData('.$name.')">';
 					echo $va;
 					echo "</a>";
-					echo "<br/>";
-			}
-		}
-	   ?>
-
+          echo "<br>";
+          echo "<hr>";
+			  }
+		  }
+	     ?>
     </div>
     <!-- Main Panel - Scene -->
     <div class="scene card">

@@ -256,3 +256,17 @@ nav ul li.logo a{
   line-height: 15px;
   margin: 2px 6px 16px 0px;
 }
+
+.loadInfo {
+  color: black;
+  margin: 15px;
+  text-decoration: none;
+}
+
+.loadInfo:hover {
+  color: #C70039;
+}
+
+hr {
+  color: #dedede;
+}
