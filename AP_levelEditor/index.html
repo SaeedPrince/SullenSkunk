@@ -56,7 +56,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="levels.php">Load Levels</a></li>
           <li><a href="#" onclick='displayPopup()'>Save</a></li>
-          <li><a href="#">Play</a></li>
           <li class="logo"><a href="#">Angry Pigs Level Editor<img src="img/logo.png" alt="Angry Pigs Editor"></a></li>
       </ul>
   </nav>
@@ -72,8 +71,8 @@
     <!-- Main Panel - Scene -->
     <div class="scene card">
 	<!-- here required form for save background image -->
-	<form id="uploadimage" action="savebg.php" method="post" enctype="multipart/form-data">
-      <input type="file" id="getval" name="background-image"/><br/><br/>
+	<form id="uploadimage" action="#" method="post" enctype="multipart/form-data">
+      <input type="file" id="getval" name="background-image" onchange="appEditor.readURL(event)" /><br/><br/>
 	</form>
 	  <!-- layer data -->
 	  <div id='layerData'>

@@ -7,6 +7,7 @@ class Editor {
     this.bee   = $('.obj-bee');
     this.save  = $('.submitBtn');
     this.load  = $('.loadInfo');
+		//this.play  = $('');
     this.obj = {
         type: "",
         x: 0,
@@ -99,8 +100,8 @@ class Editor {
   		}else{
   			$.ajax({
   				type:'POST',
-  				url:'server/savejson.php',
-  				data:'saveLevel=1&name='+name+'&data='+escape(values)+'&form_data='+form_data,
+  				url:'server/server.php',
+  				data:'action=saveLevel&name='+name+'&data='+escape(values)+'&form_data='+form_data,
   				beforeSend: function () {
   					$('.submitBtn').attr("disabled","disabled");
   				},
@@ -113,20 +114,41 @@ class Editor {
 
   /* Event handler to get information about all objects in the scene */
   loadLevelData(event) {
-
+		$.ajax({
+				url: 'server/server.php',
+				type: 'POST',
+				data: 'action=loadLevel',
+				success: function(response){
+					$('#LoadLevelFileData').html(response);
+				}
+		});
   }
 
-
+  /* Event handler to get information about individual level to display scene */
+  loadIndividualLevelData(event) {
+		$.ajax({
+				type:'POST',
+				url:'server/server.php',
+				data:'action=displayLevel&name='+event,
+				beforeSend: function () {
+					$('.submitBtn').attr("disabled","disabled");
+					$('.modal-body').css('opacity', '.5');
+				},
+				success:function(msg){
+					$('#layerData').html('');
+					$('#layerData').html(msg);
+				}
+		});
+  }
 
   /* function to add background image from PC */
   readURL(event){
-  	var getImagePath = URL.createObjectURL(event.target.files[0]);
-  	$('.sceneBG').css('background-image', 'url(' + getImagePath + ')');
+		var getImagePath = URL.createObjectURL(event.target.files[0]);
 		var myFormData = new FormData();
 		myFormData.append('background-image', $('#getval').prop('files')[0]);
-
+		myFormData.append('action', 'saveImage');
 		$.ajax({
-		  url: 'server/savebg.php',
+		  url: 'server/server.php',
 		  type: 'POST',
 		  processData: false, // important
 		  contentType: false, // important
@@ -136,6 +158,18 @@ class Editor {
 				$('.sceneBG').css('background-image', 'url(' + response + ')');
 			}
 		});
+  }
+  
+  //testing loading the json contect via jquery as image to canvas.
+  loadCanvasData(event){
+	    var element = $("#layerData"); // global variable
+		var getCanvas; // global variable
+		html2canvas(element, {
+         onrendered: function (canvas) {
+                $(".play-modal").append(canvas);
+                getCanvas = canvas;
+             }
+         });
   }
 }
 

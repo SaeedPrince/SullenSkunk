@@ -1,10 +1,19 @@
-###**PG10 T2 Web Apps 2 - Ax: Angry Pigs Level Editor**
+###**PG10 T2 Web Apps 2 - Ax: Angry Pigs Level Editor & Game**
 Submitted by: Richard Scott de Araujo Zampieri
-Date: 31/05/2017
+Date: 19/06/2017
 Version: [if applicable]
 ----------
 
-(https://pgwm.vfs.local.dev/~pg10richard/AP_levelEditor/index.html) | [tutorial](link)
+(https://pgwm.vfs.local.dev/~pg10richard/AP_levelEditor/) | [tutorial](link)
+
+** Obs **
+
+The game is using jquery, css3, html5 and php as requested
+All functions to manipulate DOM elements are done by javascript functions using jquery
+The php server is acting as service provider to generate json, save and load
+
+We tried to implement physics using the box2dweb but we couldn't understand how to iterate with all elements in the DOM
+and generate them into the canvas
 
 
 ####**Download/Install**
@@ -19,4 +28,6 @@ Version: [if applicable]
 ####**How to use**
 --------
 1 - click on the link above to access the game
-2 - click in play and start the game
+2 - Click in the elements to start to add them into the scene and build the levels
+3 - Click and save and give it a level name
+4 - Click em Load function to see the levels created
